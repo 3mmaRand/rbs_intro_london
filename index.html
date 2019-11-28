@@ -6,8 +6,6 @@
     <meta name="author" content="Emma Rand" />
     <meta name="date" content="2019-12-09" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/jquery/jquery.min.js"></script>
     <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
@@ -18,13 +16,19 @@
     <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
     <script src="libs/crosstalk/js/crosstalk.min.js"></script>
     <script src="libs/kePrint/kePrint.js"></script>
+    <link rel="stylesheet" href="emma.css" type="text/css" />
+    <link rel="stylesheet" href="emma-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 
 background-image: url(pics/Royal_Society_of_Biology.png)
-background-position: 50% 95%
+background-position: 50% 65%
 background-size: 400px
+
+
+
+
 
 
 
@@ -36,6 +40,10 @@ class: inverse
 
 ### Emma Rand &lt;br&gt; emma.rand@york.ac.uk &lt;br&gt; University of York &lt;br&gt; 2019-12-09
 
+.footnote[
+Made with xaringan (Xie, 2019)
+
+]
 ---
 
 # Goal!
@@ -83,13 +91,13 @@ It is not
 # Workshop overview
 
 
-<div id="htmlwidget-6b437d130e8b741ff16d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6b437d130e8b741ff16d">{"x":{"filter":"none","fillContainer":false,"data":[["0930","1000","1115","1230","1315","1430","1445","1600"],["Registration and Coffee","Introduction","Working with Data","Lunch","Reproducible Reports using R Markdown","Coffee","Working with your own data","Departure"],["Assistance with installation of R and RStudio if needed.","Finding your way round RStudio, typing in data, performing calculations and making a simple figure.  Using the manual.","Importing, visualising and summarizing data, the concept of 'tidy' data and some typical data tidying tasks.","","More advanced figures, Organising analyses, updatable reports in a variety of output formats.","","Create a report and figure for your data or use one of our examples.",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Time<\/th>\n      <th>Topic<\/th>\n      <th>Detail<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-47bc18a7fe9d4794d6ff" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-47bc18a7fe9d4794d6ff">{"x":{"filter":"none","fillContainer":false,"data":[["0930","1000","1115","1230","1315","1430","1445","1600"],["Registration and Coffee","Introduction","Working with Data","Lunch","Reproducible Reports using R Markdown","Coffee","Working with your own data","Departure"],["Assistance with installation of R and RStudio if needed.","Finding your way round RStudio, typing in data, performing calculations and making a simple figure.  Using the manual.","Importing, visualising and summarizing data, the concept of 'tidy' data and some typical data tidying tasks.","","More advanced figures, Organising analyses, updatable reports in a variety of output formats.","","Create a report and figure for your data or use one of our examples.",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Time<\/th>\n      <th>Topic<\/th>\n      <th>Detail<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 background-image: url(pics/tidyverse_logo.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Before Lunch
 
@@ -105,11 +113,7 @@ background-size: 200px
 * Importing data: working directories and paths  
 * Summarising and visualising with the [`tidyverse`](https://www.tidyverse.org/)  
 * Installing and loading packages
-* The concept of 'tidy'&lt;sup&gt;1&lt;/sup&gt; data
-
-.footnote[
-[1] Wickham, H. (2014), "Tidy Data," Journal of Statistical Software, 59, available at [http://www.jstatsoft.org/article/view/v059i10](http://www.jstatsoft.org/article/view/v059i10)
-]
+* The concept of 'tidy' data (Wickham, 2014)
 
 ---
 class: inverse,
@@ -418,14 +422,6 @@ class(n)
 
 --
 
-
-```r
-class(n)
-```
-
-```
-## [1] "numeric"
-```
 
 ```r
 str(n)
@@ -800,12 +796,12 @@ barplot(freq,
 ---
 
 background-image: url(pics/ggplot.jpg)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
 # Typing in data, calcs, plots
 
-## Plotting using `ggplot2`
+## Plotting using ggplot2
 
 The `barplot()` command is part the 'base' plotting system.
 
@@ -813,10 +809,10 @@ Base packages (collections of commands) always come with R.
 
 --
 
-Other packages, such as [ggplot2](https://ggplot2.tidyverse.org/)&lt;sup&gt;1&lt;/sup&gt; need to be added ('installed').
+Other packages, such as ggplot2 (Wickham, 2016)&lt;sup&gt;1&lt;/sup&gt; need to be added ('installed').
 
 
-.foornote[
+.footnote[
 [1] A fantastic plotting system which has a common conceptual framework for visualisation based on [The Grammar of Graphics](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/ref=as_li_ss_tl?ie=UTF8&amp;qid=1477928463&amp;sr=8-1&amp;keywords=the+grammar+of+graphics&amp;linkCode=sl1&amp;tag=ggplot2-20&amp;linkId=f0130e557161b83fbe97ba0e9175c431)
 ]
 
@@ -825,7 +821,9 @@ Other packages, such as [ggplot2](https://ggplot2.tidyverse.org/)&lt;sup&gt;1&lt
 
 ## Installing - you only do once
 
-I recommend installing all of the `tidyverse` packages
+`ggplot2` is one of the `tidyverse` (Wickham, 2016) packages.
+
+I recommend installing all of `tidyverse` 
 
 
 ```r
@@ -850,10 +848,10 @@ library(tidyverse)
 ---
 
 background-image: url(pics/ggplot.jpg)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# Plotting using `ggplot2`
+# Plotting using ggplot2
 
 ## `ggplot2` or `ggplot()`
 
@@ -877,10 +875,10 @@ However, graphs only need to get very slightly more involved for it to become mu
 ---
 
 background-image: url(pics/ggplot.jpg)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# Plotting using `ggplot2`
+# Plotting using ggplot2
 
 ## `ggplot()` takes a dataframe for an argument
 
@@ -914,10 +912,10 @@ Click on `nest_data` in the Environment pane to see a spreadsheet-like view of i
 
 ---
 background-image: url(pics/ggplot.jpg)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# Plotting using `ggplot2`
+# Plotting using ggplot2
 
 ## A barplot
 
@@ -935,10 +933,10 @@ ggplot(data = nest_data, aes(x = n, y = freq)) +
 
 ---
 background-image: url(pics/ggplot.jpg)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# Plotting using `ggplot2`
+# Plotting using ggplot2
 
 ## A barplot
 
@@ -963,10 +961,10 @@ background-size: 100px
 
 ---
 background-image: url(pics/ggplot.jpg)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# Plotting using `ggplot2`
+# Plotting using ggplot2
 
 You can add an axis label like this:
 
@@ -1052,8 +1050,8 @@ class: inverse,
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: single variable 
 
@@ -1085,8 +1083,8 @@ You should see an object `pigeon` in the Environment window.
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: single variable
 ## Importing
@@ -1109,8 +1107,8 @@ That's handy!
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: single variable 
 
@@ -1126,7 +1124,7 @@ To refer a column inside a dataframe (a single column data) we need to use the d
 
 --
 
-So to output all of the one column we can use:
+So to output all of the values of one column we can use:
 
 ```r
 pigeon$interorbital
@@ -1139,8 +1137,8 @@ pigeon$interorbital
 ```
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: single variable 
 
@@ -1168,8 +1166,8 @@ Which functions will calculate the standard deviation and the number of cases, _
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: single variable 
 ## Summarising single group data 
@@ -1197,8 +1195,8 @@ length(pigeon$interorbital)
 ```
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: single variable 
 ## Plotting single group data 
@@ -1216,8 +1214,8 @@ ggplot(data = pigeon, aes(x = interorbital)) +
 ]
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: single variable 
 
@@ -1227,20 +1225,31 @@ background-size: 200px
 
 ```r
 ggplot(data = pigeon, aes(x = interorbital)) +
-  geom_histogram(bins = 10, col = "black") +
+  geom_histogram(bins = 10,             
+*                col = "black") +
   xlab("Interorbital distance (mm)")
 ```
 
 ![](index_files/figure-html/unnamed-chunk-39-1.png)&lt;!-- --&gt;
 
+]
+
 --
-We will cover more figure options as we go through the afternoon
+
+.pull-right[
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+We will cover more figure options as we go through the afternoon.
+
 ]
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: two variables 
 ## Importing 2
@@ -1265,8 +1274,8 @@ We will work with the interorbital distances of domestion pigeons in two differe
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: two variables 
 ## Importing 2
@@ -1279,19 +1288,16 @@ For example, I often use:
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: two variables 
 ## Importing 2
 
-Make a folder in your working directory called 'data'
+Make a folder in your Project directory (this is also your working directory) called 'data'
 
-You can do this either RStudio  - see the bottom right Files panel
+The easiest way to do this is in RStudio  - see the bottom right Files panel
 
-or
-
-in Windows explorer
 
 --
 
@@ -1308,18 +1314,24 @@ Save a copy of [pigeon2.txt](../data/pigeon2.txt) to the 'data' folder
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: two variables 
 ## Importing
 
-To read the data in to R you need to use the 'relative path' to the file in the `read.table()` command:
+
+To read the data in to R you need to use the 'relative path'
+
+to the file in the `read.table()` command:
+
 
 
 ```r
 pigeon2 &lt;- read.table("data/pigeon2.txt", header = TRUE)
 ```
+
+
 
 --
 
@@ -1333,8 +1345,8 @@ pigeon2.txt is inside a folder (directory) called 'data' which is in your workin
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data: two variables 
 ## Importing
@@ -1359,14 +1371,15 @@ The datatype of both variables is numeric.
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 
 # Working with Data: two variables 
+
 ## Summarising multi-group data
 
-Find the mean for each population. 
+### Find the mean for each population. 
 
 Remember, to refer a column inside a dataframe (a single column data) we need to use the dollar notation: `dataframe$columnname`
 
@@ -1396,37 +1409,46 @@ mean(pigeon2$B)
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Tidy format
 
-Instead of having a population in each column, we very often have, **and want**, data organised so the measurements are all in one column and a second column gives the group. This format is described as 'tidy'&lt;sup&gt;1&lt;/sup&gt;
+
+Instead of having a population in each column, we very often
+
+have, **and want**, data organised so the measurements are all
+
+in one column and a second column gives the group. 
+
+--
+
+This format is described as 'tidy' (Wickham, Averick, Bryan, Chang, McGowan, François, Grolemund, Hayes, Henry, Hester, Kuhn, Pedersen, Miller, Bache, Müller, Ooms, Robinson, Seidel, Spinu, Takahashi, Vaughan, Wilke, Woo, and Yutani, 2019).
+
+
+
+--
 
 Tidy data has a variable in each column and only one observation (case) per row.
 
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-
-&lt;small&gt;[1] Wickham, H. (2014), "Tidy Data," Journal of Statistical Software, 59, available at [http://www.jstatsoft.org/article/view/v059i10](http://www.jstatsoft.org/article/view/v059i10)&lt;/small&gt;
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Tidy format
+
+.pull-left[
 
 Tidy data has a variable in each column and only one observation (case) per row.
 
 Suppose we had just 3 individuals in each population:
 
-.pull-left[
+
 **NOT TIDY!**
 &lt;table&gt;
  &lt;thead&gt;
@@ -1454,6 +1476,10 @@ Suppose we had just 3 individuals in each population:
 
 
 .pull-right[
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
 **TIDY!**
 &lt;table&gt;
  &lt;thead&gt;
@@ -1494,8 +1520,8 @@ Suppose we had just 3 individuals in each population:
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
 ## Tidy format
@@ -1503,12 +1529,17 @@ background-size: 200px
 We can make the data tidy with `gather()`&lt;sup&gt;1&lt;/sup&gt;.
 
 `gather()` needs 3 arguments:
+
+.footnote[
+[1] `gather()` is a function from a package called `tidyr` which is one of the `tidyverse` packages.
+]
+
 --
 
 * the dataframe 
 --
 
-* a `key` the grouping variable 
+* a `key` which will become the name of the grouping variable 
 --
 
 * a `value` the measurement variable.
@@ -1529,17 +1560,22 @@ str(pigeon3)
 &amp;nbsp;
 &amp;nbsp;
 
-&lt;small&gt;[1] `gather()` is a function from a package called `tidyr` which is one of the `tidyverse` packages&lt;/small&gt;
+
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Summarising multi-group data
 
-Now we have a dataframe in tidy format which will make it easier to summarise, analyse and visualise.
+Now we have a dataframe in tidy format which will make it 
+
+easier to summarise, analyse and visualise.
+
+--
 
 How can we summarise now?
 
@@ -1559,14 +1595,15 @@ We will get the mean of the two populations combined.
 
 --
 
-To get the mean of each population we use `tapply()`. 
+To get the mean of each population we can use `tapply()`. 
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Summarising multi-group data
 
 `tapply()` takes three arguments: 
@@ -1581,13 +1618,17 @@ background-size: 200px
 * function to be applied:  
 
 `tapply(measurement, grouping, function)`
+
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Summarising multi-group data
+
+### Using `tapply()`
 
 
 ```r
@@ -1603,7 +1644,9 @@ tapply(pigeon3$distance, pigeon3$population, mean)
 
 Find the number of cases in each group
 
-Finshed and need more challenge? Go to the next slide
+.footnote[ &lt;div class = "blue"&gt;
+Finshed and need more challenge? Go to the next slide &lt;/div&gt;
+]
 
 --
 
@@ -1620,14 +1663,20 @@ tapply(pigeon3$distance, pigeon3$population, length)
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
-# Summarising - extra challenges
+# Working with Data 
+
+## Summarising multi-group data
+
+### Extra challenges using `tapply()` 
 
 Find the variance in each population
 
-Finshed and need more challenge? Go to the next slide
+.footnote[ &lt;div class = "blue"&gt;
+Finshed and need more challenge? Go to the next slide &lt;/div&gt;
+]
 
 --
 
@@ -1643,10 +1692,14 @@ tapply(pigeon3$distance, pigeon3$population, var)
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
-# Summarising - extra challenges
+# Working with Data 
+
+## Summarising multi-group data
+
+### Extra challenges using `tapply()` 
 
 Calculate the standard errors for each group.
 
@@ -1664,10 +1717,14 @@ You will need to
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
-# Summarising - extra challenges
+# Working with Data 
+
+## Summarising multi-group data
+
+### Extra challenges using `tapply()` 
 
 Calculate the standard errors for each group.
 
@@ -1698,57 +1755,70 @@ round(ses, 3)
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Plotting multi-group data
+
+.pull-left[
 
 
 ```r
 ggplot(data = pigeon3, aes(x = distance)) +
-  geom_histogram(bins = 10, col = "black") +
+  geom_histogram(bins = 10,
+                 col = "black") +
   xlab("Interorbital distance (mm)")
 ```
 
-
-.pull-left[
-![](index_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
+![](index_files/figure-html/unnamed-chunk-55-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
-
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 Plots the whole data set without separating the populations
 
 ]
 
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Plotting multi-group data
 
+### Using the `aes()`
+
+'map' the population variable with the `fill` aesthetic
 
 
 ```r
-{{ggplot(data = pigeon3, aes(x = distance, fill = population))}} +
-  geom_histogram(bins = 10, col = "black") +
+*ggplot(data = pigeon3, aes(x = distance, fill = population)) +
+  geom_histogram(bins = 10, 
+                 col = "black") +
   xlab("Interorbital distance (mm)")
 ```
 
+![](index_files/figure-html/unnamed-chunk-56-1.png)&lt;!-- --&gt;
 
-.pull-left[
+ 
 
-![](index_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
-]
+---
+background-image: url(pics/interorbital.png)
+background-position: 100% 0%
+background-size: 180px
 
---
+# Working with Data 
 
-.pull-right[
+## Plotting multi-group data
 
-We need only 'map' the population variable to the 'use the `fill` aesthetic 
+### Using the `aes()`
 
 Aesthetics include:
 * x
@@ -1759,139 +1829,131 @@ Aesthetics include:
 * size
 * alpha
 
-]
+
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Plotting multi-group data
+
+### Changing the `geom` 
+
+From `geom_histogram()` to `geom_density()`
 
 
 ```r
 ggplot(data = pigeon3, aes(x = distance, fill = population)) +
-  {{geom_density(col = "black")}} +
+* geom_density(col = "black") +
   xlab("Interorbital distance (mm)")
 ```
 
-.pull-left[
-![](index_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
-]
+![](index_files/figure-html/unnamed-chunk-57-1.png)&lt;!-- --&gt;
 
---
-
-.pull-right[
-
-Changing the `geom` from `geom_histogram()` to `geom_density()`
-
-]
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Plotting multi-group data
+
+### And altering the transparancy using `alpha`
+
 
 
 ```r
-ggplot(data = pigeon3, aes(x = distance, fill = population))  +
-  {{geom_density(col = "black", alpha = 0.3)}} +
+ggplot(data = pigeon3, aes(x = distance, fill = population)) +
+* geom_density(col = "black", alpha = 0.3) +
   xlab("Interorbital distance (mm)")
 ```
 
-.pull-left[
-![](index_files/figure-html/unnamed-chunk-62-1.png)&lt;!-- --&gt;
-]
+![](index_files/figure-html/unnamed-chunk-58-1.png)&lt;!-- --&gt;
 
-
-.pull-right[
-
-And altering the transparancy using `alpha`
-
-]
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Plotting multi-group data
+
+### Themes
 
 
 ```r
-ggplot(data = pigeon3, aes(x = distance, fill = population))  +
+ggplot(data = pigeon3, aes(x = distance, fill = population)) +
   geom_density(col = "black", alpha = 0.3) +
   xlab("Interorbital distance (mm)") +
-*  theme_classic()
+* theme_classic()
 ```
 
-.pull-left[
-![](index_files/figure-html/unnamed-chunk-64-1.png)&lt;!-- --&gt;
-]
+![](index_files/figure-html/unnamed-chunk-59-1.png)&lt;!-- --&gt;
 
-
-.pull-right[
-
-And using a built in `theme()` to make it more publication friendly.
-
-]
 ---
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Plotting multi-group data
+
+### A different kind of plot
+
+Instead of plotting the distribution, we can plot the population on the _x_-axis
+
+and the distances on the _y_-axis **as points**
+
+---
+background-image: url(pics/interorbital.png)
+background-position: 100% 0%
+background-size: 180px
+
+# Working with Data 
+
+## Plotting multi-group data
+
+### A different kind of plot
 
 
 ```r
-{{ggplot(data = pigeon3, aes(x = population, y = distance)) }} +
-  {{geom_point()}} +
+*ggplot(data = pigeon3, aes(x = population, y = distance)) +
+* geom_point() +
   xlab("Population") +
   ylab("Interorbital distance (mm)")
 ```
 
-.pull-left[
-![](index_files/figure-html/unnamed-chunk-66-1.png)&lt;!-- --&gt;
-]
+![](index_files/figure-html/unnamed-chunk-60-1.png)&lt;!-- --&gt;
 
-
-.pull-right[
-
-Instead of plotting the distribution, we can plot the which population it is on the _x_-axis and the distances on the _y_-axis **as points**
-
-]
 
 ---
-
 background-image: url(pics/interorbital.png)
-background-position: 95% 5%
-background-size: 200px
+background-position: 100% 0%
+background-size: 180px
 
 # Working with Data 
+
 ## Plotting multi-group data
+
+### Another  plot
+
 
 
 ```r
 ggplot(data = pigeon3, aes(x = population, y = distance))  +
-{{geom_violin()}} +
+* geom_violin() +
   xlab("Population") +
   ylab("Interorbital distance (mm)") + 
   theme_classic()
 ```
 
-.pull-left[
-![](index_files/figure-html/unnamed-chunk-68-1.png)&lt;!-- --&gt;
-]
+![](index_files/figure-html/unnamed-chunk-61-1.png)&lt;!-- --&gt;
 
-
-.pull-right[
-
-Instead of plotting the distribution, we can plot the which population it is on the _x_-axis and the distances on the _y_-axis...**as a volin plot**
-
-]
 
 ---
 class: inverse,
@@ -1902,22 +1964,26 @@ class: inverse,
 # Workshop overview
 
 
-<div id="htmlwidget-883f841675dc419af2de" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-883f841675dc419af2de">{"x":{"filter":"none","fillContainer":false,"data":[["0930","1000","1115","1230","1315","1430","1445","1600"],["Registration and Coffee","Introduction","Working with Data","Lunch","Reproducible Reports using R Markdown","Coffee","Working with your own data","Departure"],["Assistance with installation of R and RStudio if needed.","Finding your way round RStudio, typing in data, performing calculations and making a simple figure.  Using the manual.","Importing, visualising and summarizing data, the concept of 'tidy' data and some typical data tidying tasks.","","More advanced figures, Organising analyses, updatable reports in a variety of output formats.","","Create a report and figure for your data or use one of our examples.",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Time<\/th>\n      <th>Topic<\/th>\n      <th>Detail<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-eccb0a597e2e9538eb00" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-eccb0a597e2e9538eb00">{"x":{"filter":"none","fillContainer":false,"data":[["0930","1000","1115","1230","1315","1430","1445","1600"],["Registration and Coffee","Introduction","Working with Data","Lunch","Reproducible Reports using R Markdown","Coffee","Working with your own data","Departure"],["Assistance with installation of R and RStudio if needed.","Finding your way round RStudio, typing in data, performing calculations and making a simple figure.  Using the manual.","Importing, visualising and summarizing data, the concept of 'tidy' data and some typical data tidying tasks.","","More advanced figures, Organising analyses, updatable reports in a variety of output formats.","","Create a report and figure for your data or use one of our examples.",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Time<\/th>\n      <th>Topic<\/th>\n      <th>Detail<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 class: inverse,
 
-# Reproducible Reports using R Markdown
-## 1315 - 1430
+# Reproducible Reports: R Markdown
+
+### 1315 - 1430
 
 ---
 
+# Reproducible Reports: R Markdown
 
-&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfaHl92gPSWI4jRG79Un6d4OhXWsPGhN0YwVV4kgfAQgCKgBg/viewform?embedded=true" width="500" height="700" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading...&lt;/iframe&gt;
+&lt;iframe src="https://forms.gle/EqQKx4nLQQemQZWb8" width="500" height="700" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading...&lt;/iframe&gt;
 
 ---
-# How do you work?
+# Reproducible Reports: R Markdown
+
+## How do you work?
 
 * What program do you analyse your data in?  
 
@@ -1939,20 +2005,27 @@ class: inverse,
 
 * What do you do if you wrote in Word formated for one journal and now have to submit in PDF formated for another?
 
---
+---
+# Reproducible Reports: R Markdown
 
-Typically people analyse, plot and write up in different programs. Graphs are saved to files and copied and pasted into the final report. 
+## How do you work?
 
-This process relies on manual labour. If the data changes, the author must repeat the entire process to update the report.
+Typically people analyse, plot and write up in different programs. 
+
+Graphs are saved to files and copied and pasted into the final report. 
+
+This process relies on manual labour. 
+
+If the data changes, the author must repeat the entire process to update the report.
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
-The brilliance of R Markdown is that you can use a **single R Markdown file** to:
+The brilliance of R Markdown (Allaire, Xie, McPherson, Luraschi, Ushey, Atkins, Wickham, Cheng, Chang, and Iannone, 2019; Xie, Allaire, and Grolemund, 2018) is that you can use a **single R Markdown file** to:
 
 * save and execute code  
 
@@ -1969,10 +2042,10 @@ This is a time-efficient and reproducible way to write!
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
 ## Many output formats are supported!
 
@@ -1995,18 +2068,20 @@ background-size: 100px
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
-## Let's get started...organising
+## Let's get started
+
+### Organising your work
 
 You are going to work with some made-up data on the myoglobin content in the skeletal muscle of three species of seal
 
 --
 
-Make a folder called 'seals'
+Create a new project called 'seals'
 
 --
 
@@ -2014,26 +2089,23 @@ Inside 'seals', make folders called 'raw_data' and 'processed_data'
 
 --
 
-.pull-right[
-** I strongly recommend avoiding spaces in names of files, folders and variable names** 
+
+I strongly recommend avoiding spaces in names of files, folders and variable names.
 
 R can cope with them....  but they can often confuse humans!
-]
+
 --
 
 Save a copy of [seal.txt](seals/raw_data/seal.txt) to the 'raw_data' folder
 
---
-
-Set your working directory to 'seals'
 
 ---
 
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
 ## Live demo
 
@@ -2042,10 +2114,10 @@ Just watch for a while....
 ---
 
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
 ## Key points from the demo
 
@@ -2063,10 +2135,10 @@ background-size: 100px
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
 ## Your own R markdown file
 
@@ -2082,7 +2154,16 @@ Add your name, and a title
 
 You could copy and paste a title from [paper.html](seals/paper.html)
 
---
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Your own R markdown file
+
+### Default code chunk behaviour.
 
 Set some **default** code chunk options. I recommend these:
 
@@ -2097,21 +2178,96 @@ knitr::opts_chunk$set(echo = FALSE,
 
 `echo = FALSE` means the code will not be included by default - this is normally what you want in a report.
 
-Any output **is** included by default
- 
+Any output is included by default.
+
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
-Add a little introduction - again you could copy and paste.
-Save your file
+## Your own R markdown file
+
+### References
+
+References and citations can be added by creating a .bib file containing references in BibTeX format and another line to the YAML header.  
 
 --
 
-Use Insert | R to add a code chunk
+`bibliography: mybibfile.bib` must be added to the YAML header
+
+--
+
+Citations are added using:
+  *  blah blah blah `[@xaringan]` for blah blah blah (Xie, 2019).    
+  *  Xie `[-@xaringan]` said blah blah blah for Xie (2019) said blah blah blah.  
+
+--
+
+Every citation used results in the reference being added to a list at the bottom of the output.
+
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Your own R markdown file
+
+### References
+
+#### Make a .bib file
+
+Do File | New file | Text file
+
+Save as `mybibfile.bib`
+
+#### Add BibTeX entries
+
+`citation("package")` in the console will give packages references in BibTeX format.  
+
+BibTeX format is also available through most referencing software (e.g., PaperPile).
+
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Add a section of text
+
+### Introduction
+
+Add a header for the introductions and text - again you could copy and paste.
+
+```
+# Introduction
+Aquatic and marine mammals are able to dive
+underwater.................................
+...investigated whether the concentration of
+myoglobin differed between  species.
+
+```
+--
+
+
+Save your file.
+
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Add a code chunk
+
+### Packages
+
+The first two code chunks are usually for the default code chunk options (which I tend to call `setup`) and for package loading.Use Insert | R to add a code chunk
 
 Load the tidyverse
 
@@ -2129,16 +2285,44 @@ library(tidyverse)
 
 ]
 
---
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
 
-Add a heading for the Methods section
+# Reproducible Reports: R Markdown
+
+## Add a section of text
+
+### Methods
+
+Add a heading for the Methods section including a reference to R.
+
+```
+# Methods
+We used R [@R-core] with tidyverse packages [@tidyverse] for all analyses.
+
+```
+--
+Hit Knit!
+
+This should render as:
+
+We used R (R Core Team 2019) with tidyverse packages (Wickham 2017) for all analyses.
+
+
+
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
+
+## Add a code chunk
+
+### Importing data
 
 Insert a code chunk for importing the data
 
@@ -2151,7 +2335,16 @@ seal &lt;- read.table("raw_data/seal.txt", header = TRUE)
 ```
 ````
 
---
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Run a code chunk
+
+### Interactively..
 
 Note you can run the code interactively to check your progress and the output will be shown in the Rmd document.
 
@@ -2176,11 +2369,14 @@ str(seal)
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
+## Add a code chunk
+
+### Tidying data
 
 Insert a code chunk for tidying the data and writing it out to a file
 
@@ -2196,16 +2392,46 @@ write.table(seal2,
 ```
 ````
 
---
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Add a code chunk
+
+### Summarising data
 
 Insert a code chunk for summarising the data
 
 You may need to install `Rmisc` first.
 
+--
+
+And add it to your `package`chunk.
+
+````
+```{r packages}
+library(tidyverse)
+library(Rmisc)
+
+```
+````
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Add a code chunk
+
+### Summarising data
 
 ````
 ```{r summarise}
-sealsummary &lt;- Rmisc::summarySE(data = seal2,
+sealsummary &lt;- summarySE(data = seal2,
                          measurevar = "myoglobin",
                          groupvars = "species")
 ```
@@ -2213,28 +2439,34 @@ sealsummary &lt;- Rmisc::summarySE(data = seal2,
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
-Live demo of what is in `sealsummary`
+## What is in `sealsummary`?
 
-Knit your file
+### Select a section of code
+
+And run (ctrl-enter)
+
+&lt;img src="pics/sealsummary.png" width="700px" /&gt;
 
 --
 
-Add `sealsummary` to the code chunk and knit again  
+Knit your file
 
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
 ## Inline code
+
+### Example
 
 Code results can be inserted directly into the text of a .Rmd file using inline code.
 
@@ -2250,12 +2482,14 @@ The squareroot of 2 is  1.4142136
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
 ## Inline code
+
+### Discuss the highest mean
 
 We could add
 
@@ -2270,11 +2504,14 @@ The highest mean is 49.01033
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
+## Insert a code chunk
+
+### To access object contents more easily
 
 Insert a code chunk extracting values to make inline reporting easier
 
@@ -2293,15 +2530,29 @@ lowestspp &lt;- sealsummary$species[sealsummary$myoglobin == lowestmean]
 
 ```
 ````
+---
+background-image: url(pics/rmarkdown.png)
+background-position: 100% 0%
+background-size: 100px
+
+# Reproducible Reports: R Markdown
+
+## Your turn.
+
+### Add a results section
+
+
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
-## Special characters
+## Adding text
+
+### Special characters
 
 You can include special characters in a markdown document using LaTeX markup. This has \$ signs on the outside and uses backslashes and curly braces to indicate that what follows should be interpreted as a special character of special formatting.
 
@@ -2311,53 +2562,61 @@ For example, to get `\(\bar{x} \pm s.e.\)` you write `$\bar{x} \pm s.e.$`
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
-# R Markdown
+# Reproducible Reports: R Markdown
 
 
 Go to live demo of document
 
 ---
 background-image: url(pics/rmarkdown.png)
-background-position: 95% 5%
+background-position: 100% 0%
 background-size: 100px
 
 # R Markdown Resources
 
-R Markdown cheatsheet https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+## R Markdown cheatsheet
 
-R Markdown: The Definitive Guide
+https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+
+## R Markdown: The Definitive Guide
+
 Yihui Xie, J. J. Allaire, Garrett Grolemund
+
 https://bookdown.org/yihui/rmarkdown/
 
-RStudio’s guide http://rmarkdown.rstudio.com/index.html
+## RStudio’s guide
+http://rmarkdown.rstudio.com/index.html
 
 
 ---
-# Credits and References
-&lt;small&gt;
-Allaire, J.J., Xie, Y., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W. and Iannone, R. (2019). rmarkdown: Dynamic Documents for R. R  package version 1.12. URL https://rmarkdown.rstudio.com.
+# References
 
+Allaire, J, Y. Xie, J. McPherson, et al. (2019). _rmarkdown:
+Dynamic Documents for R_. R package version 1.16. URL:
+[https://github.com/rstudio/rmarkdown](https://github.com/rstudio/rmarkdown).
 
-Python Software Foundation. Python Language Reference, version 2.7. Available at http://www.python.org
+Wickham, H. (2014). "Tidy Data". In: _Journal of Statistical
+Software, Articles_ 59.10, pp. 1-23.
 
-R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.
+Wickham, H. (2016). _ggplot2: Elegant Graphics for Data Analysis_.
+Springer-Verlag New York. ISBN: 978-3-319-24277-4. URL:
+[https://ggplot2.tidyverse.org](https://ggplot2.tidyverse.org).
 
-Wickham, H. (2014), "Tidy Data," Journal of Statistical Software, 59, available at http://www.jstatsoft.org/article/view/v059i10
+Wickham, H, M. Averick, J. Bryan, et al. (2019). "Welcome to the
+Tidyverse". In: _JOSS_ 4.43, p. 1686.
 
-Wickham, H. &amp; Grolemund, G. (2016) R for Data Science. O’Reilly. http://r4ds.had.co.nz/
+Xie, Y. (2019). _xaringan: Presentation Ninja_. R package version
+0.12. URL:
+[https://CRAN.R-project.org/package=xaringan](https://CRAN.R-project.org/package=xaringan).
 
-Wickham, H. (2017). tidyverse: Easily Install and Load the 'Tidyverse'. R package version 1.2.1. https://CRAN.R-project.org/package=tidyverse
+Xie, Y, J. Allaire, and G. Grolemund (2018). _R Markdown: The
+Definitive Guide_. ISBN 9781138359338. Boca Raton, Florida:
+Chapman and Hall/CRC. URL:
+[https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown).
 
-Wilkinson, L. (2005) The Grammar of Graphics. Statistics and Computing. 2nd ed. New York, NY: Springer
-
-Xie, Y. and Allaire J.J. and Grolemund, G. (2018). R Markdown: The Definitive Guide. Chapman and Hall/CRC. ISBN 9781138359338. URL https://bookdown.org/yihui/rmarkdown.
-
-Xie, Y. (2019). xaringan: Presentation Ninja. R package version 0.9.  https://CRAN.R-project.org/package=xaringan
-
-&lt;/small&gt;
 
 
 ---
@@ -2365,16 +2624,27 @@ background-image: url(pics/Royal_Society_of_Biology.png)
 background-position: 0.5% 0.5%
 background-size: 350px
 
-
-class: inverse,
+class: inverse
 
 # Congratulations! Keep practising!
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Emma Rand 
 
-### Emma Rand &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; emma.rand@york.ac.uk
-#### Twitter: [@er13_r](https://twitter.com/er13_r) &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; github: 3mmarand
-#### blog: https://buzzrbeeline.blog/
+emma.rand@york.ac.uk
 
+Twitter: [@er13_r](https://twitter.com/er13_r) 
+
+github: [3mmaRand](https://github.com/3mmaRand)
+
+blog: https://buzzrbeeline.blog/
+&lt;br&gt;
+
+.footnote[
 &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;Royal Society of Biology CPD: An Introduction to Reproducible Analyses in R&lt;/span&gt; by &lt;span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"&gt;Emma Rand&lt;/span&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

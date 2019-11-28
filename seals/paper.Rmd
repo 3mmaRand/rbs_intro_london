@@ -3,8 +3,9 @@ title: "Variation in myoglobin content of skeletal muscle of seal species."
 author: "Emma Rand"
 output:
   html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+bibliography: reference.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -15,6 +16,7 @@ knitr::opts_chunk$set(echo = FALSE,
 
 ```{r packages}
 library(tidyverse)
+library(Rmisc)
 ```
 
 # Introduction
@@ -40,7 +42,7 @@ write.table(seal2,
 
 
 ```{r summarise}
-sealsummary <- Rmisc::summarySE(data = seal2,
+sealsummary <- summarySE(data = seal2,
                          measurevar = "myoglobin",
                          groupvars = "species")
 ```
@@ -56,8 +58,9 @@ lowestse <- sealsummary$se[sealsummary$myoglobin == lowestmean]
 lowestspp <- sealsummary$species[sealsummary$myoglobin == lowestmean]
 
 ```
+
 We measured the myoglobin content of the skeletal muscle of `r sealsummary$N[1]` individuals in each of three species.
-We used R Core Team (2018) and tidyverse packages (Wickham, 2017) for all analyses.
+We used R [@R-core] with tidyverse packages [@tidyverse] for all analyses.
 
 
 
@@ -117,5 +120,5 @@ ggplot(seal2, aes(x = species, y = myoglobin) ) +
 ```
 
 
-
+# References
 

@@ -1,6 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,700,700i);
+
 .remark-slide-content {
   background-color: #FAFAFA;
-  border-top: 80px solid #23373B;
+  border-top: 80px solid #324e54;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.5;
@@ -12,12 +14,12 @@
 }
 
 .inverse {
-  background-color: #23373B;
+  background-color: #324e54;
   text-shadow: none;
 }
 
 .remark-slide-content > h1 {
-  font-family: 'Fira Sans';
+  font-family: 'Open Sans';
   font-weight: normal;
   font-size: 45px;
   margin-top: -95px;
@@ -93,13 +95,13 @@ position: absolute;
 
 .remark-slide-number {
   font-size: 13pt;
-  font-family: 'Fira Sans';
+  font-family: 'Open Sans';
   color: #272822;
   opacity: 1;
 }
 .inverse .remark-slide-number {
   font-size: 13pt;
-  font-family: 'Fira Sans';
+  font-family: 'Open Sans';
   color: #FAFAFA;
   opacity: 1;
 }
@@ -110,8 +112,8 @@ position: absolute;
 }
 
 .remark-inline-code {
-  /* background: #F5F5F5; /* lighter */
-  background: #e7e8e2; /* darker */
+  background: #F5F5F5; /* lighter */
+  /* background: #e7e8e2; /* darker */
   border-radius: 3px;
   padding: 4px;
 }
