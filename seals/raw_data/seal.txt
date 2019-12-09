@@ -1,6 +1,4 @@
-Harbour	Weddell	Bladdernose
-49.69	55.41	56.19
-51.02	40.08	48.36
+Weddell	Bladdernose Harbour
 41.57	46.29	37.77
 45.57	29.83	42.75
 39.38	52.5	27.01

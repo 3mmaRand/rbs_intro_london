@@ -1194,7 +1194,7 @@ getwd()
 
 --
 
-Save a copy of [pigeon2.txt](../data/pigeon2.txt) to the 'data' folder
+Save a copy of [pigeon2.txt](data/pigeon2.txt) to the 'data' folder
 
 
 ---

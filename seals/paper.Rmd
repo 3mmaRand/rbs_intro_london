@@ -2,9 +2,9 @@
 title: "Variation in myoglobin content of skeletal muscle of seal species."
 author: "Emma Rand"
 output:
+  pdf_document: default
   word_document: default
   html_document: default
-  pdf_document: default
 bibliography: reference.bib
 ---
 
