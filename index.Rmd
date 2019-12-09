@@ -78,9 +78,9 @@ Is an introduction to
 ![r logo](pics/RStudio-Logo-Flat.png)
 
 
-![python logo](pics/Python_logo_and_wordmark.svg.png)
-
 ]
+
+--
 
 .pull-right[
 

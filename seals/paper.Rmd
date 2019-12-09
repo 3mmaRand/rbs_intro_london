@@ -2,9 +2,9 @@
 title: "Variation in myoglobin content of skeletal muscle of seal species."
 author: "Emma Rand"
 output:
+  word_document: default
   html_document: default
   pdf_document: default
-  word_document: default
 bibliography: reference.bib
 ---
 
@@ -95,17 +95,6 @@ ggplot(seal2, aes(x = species, y = myoglobin) ) +
                 aes(ymin = myoglobin - se, 
                     ymax = myoglobin + se), 
                 width = .3 ) +
-  annotate("segment", x = 1, xend = 2, 
-           y = 72, yend = 72,
-           colour = "black") +
-  annotate("segment", x = 2, xend = 2, 
-           y = 72, yend = 70,
-           colour = "black") +
-  annotate("segment", x = 1, xend = 1, 
-           y = 72, yend = 70,
-           colour = "black") +
-  annotate("text", x = 1.5,  y = 74, 
-           label = "**", size = 8) +
   ylab(expression("Myoglobin concentration g "*Kg^{-1})) +
   ylim(0, 75) +
   xlab("Seal species") +
