@@ -156,12 +156,13 @@ background-size: 600px
 <br>
 <br>
 <br>
+<br>
 .pull-left[
-## Generating the results
+Generating the results
 ]
 
 .pull-right[
-## Analysing and reporting them
+Analysing and reporting them
 ]
 ---
 background-image: url(pics/rationale2.png)
@@ -1177,7 +1178,9 @@ background-size: 180px
 # Working with Data: two variables 
 ## Importing 2
 
-Make a folder in your Project directory (this is also your working directory) called 'data'
+Make a folder in your Project directory 
+
+(this is also your working directory) called 'data'
 
 The easiest way to do this is in RStudio  - see the bottom right Files panel
 
